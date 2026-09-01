@@ -16,6 +16,7 @@ rmk = { path = "vendor/rmk", default-features = false, features = [
     "defmt",
     "storage",
     "vial",
+    "display",
     "host_lock",
     "nrf52840_ble",
     "split",
@@ -34,6 +35,11 @@ nrf-mpsl = { git = "https://github.com/alexmoon/nrf-sdc", rev = "f54b6389ffa2750
     "critical-section-impl",
     "nrf52840",
 ] }
+# Driver untuk layar OLED bawaan Corne
+ssd1306 = "0.8" 
+
+# Library untuk menggambar teks/bentuk di Rust
+embedded-graphics = "0.8"
 bt-hci = { version = "0.9", features = ["defmt"] }
 
 cortex-m = "0.7.7"
