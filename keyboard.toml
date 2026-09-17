@@ -17,31 +17,7 @@ manufacturer = "corne-rmk"
 chip = "nrf52840"
 usb_enable = true
 
-[split.central.display]
-driver = "ssd1306"
-size = "128x64"
-rotation = 0
-render_interval = 33
-min_render_interval = 10
-renderer = "my_crate::DongleRenderer"
 
-[split.central.display.protocol.i2c]
-instance = "TWISPI0"
-scl = "P0_17"
-sda = "P0_20"
-
-[split.peripheral.display]
-driver = "ssd1306"
-size = "128x32"
-rotation = 90
-render_interval = 33
-min_render_interval = 10
-renderer = "OledRenderer"
-
-[split.peripheral.display.protocol.i2c]
-instance = "TWISPI0"
-scl = "P0_20"
-sda = "P0_17"
 
 # nice!nano v2 has the REG0/REG1 LC filters. The generic nrf52840 chip default
 # leaves DCDC off; turn it on explicitly (without using board = "nice!nano_v2",
